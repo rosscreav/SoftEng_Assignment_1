@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: Software_Eng.Assignment1.StudentTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.152 sec <<< FAILURE!
+testgetUsername(Software_Eng.Assignment1.StudentTest)  Time elapsed: 0.151 sec  <<< FAILURE!
+junit.framework.ComparisonFailure: expected:<......> but was:<... ...>
+	at junit.framework.Assert.assertEquals(Assert.java:81)
+	at junit.framework.Assert.assertEquals(Assert.java:87)
+	at Software_Eng.Assignment1.StudentTest.testgetUsername(StudentTest.java:37)
+
