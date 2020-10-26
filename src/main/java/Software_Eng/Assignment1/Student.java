@@ -2,6 +2,7 @@ package Software_Eng.Assignment1;
 
 //Imports
 import org.joda.time.DateTime;
+import java.util.ArrayList;
 
 
 public class Student 
@@ -12,11 +13,11 @@ public class Student
 	private DateTime DOB;
 	private long ID;
 	private String Username;
-	private Course[] Courses;
-	private Module[] Modules;
+	private ArrayList<Course> Courses;
+	private ArrayList<Module> Modules;
 	
 	
-    public Student(String Name,int Age,DateTime DOB,long ID,Course[] Courses,Module[] Modules)
+    public Student(String Name,int Age,DateTime DOB,long ID,ArrayList<Course> Courses,ArrayList<Module> Modules)
     {
         this.Name=Name;
         this.Age=Age;
@@ -27,7 +28,10 @@ public class Student
     }
 
     public String getUsername(){
-    	return ((Name+Age).replaceAll("\\s+", ""));
+    	if (Username==null) {
+    		Username=((Name+Age).replaceAll("\\s+", ""));
+    	}
+    	return Username;
     }
 
     //Accessor Methods
@@ -35,8 +39,8 @@ public class Student
 	public int getAge(){return Age;}
 	public DateTime getDOB(){return DOB;}
 	public long getID(){return ID;}
-	public Course[] getCourses(){return Courses;}
-	public Module[] getModules(){return Modules;}
+	public ArrayList<Course> getCourses(){return Courses;}
+	public ArrayList<Module> getModules(){return Modules;}
 
 	//Mutator Methods
 	public void setName(String Name){this.Name=Name;}
@@ -44,7 +48,7 @@ public class Student
 	public void setDOB(DateTime DOB){this.DOB=DOB;}
 	public void setID(long ID){this.ID=ID;}
 	public void setUsername(String Username){this.Username=Username;}
-	public void setCourses(Course[] Courses){this.Courses=Courses;}
-	public void setModules(Module[] Modules){this.Modules=Modules;}
+	public void setCourses(ArrayList<Course> Courses){this.Courses=Courses;}
+	public void setModules(ArrayList<Module> Modules){this.Modules=Modules;}
     
 }
