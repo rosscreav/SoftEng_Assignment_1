@@ -47,11 +47,11 @@ public class Student
 
 	public void Printout(){
 		System.out.printf("Username: %s",getUsername());
-		System.out.print(" \tModules: ");
+		System.out.print(" \t\tModules: ");
 		for(String x:Modules){
 			System.out.printf(x+" ");
 		}
-		System.out.print("\t\t\t\tCourses: ");
+		System.out.print("\t\t\t\t\tCourses: ");
 		for(String x:Courses){
 			System.out.printf(x+" ");
 		}
