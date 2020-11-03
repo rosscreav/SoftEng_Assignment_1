@@ -13,11 +13,9 @@ public class Course
 	private DateTime StartDate;
 	private DateTime EndDate;
 
-    public Course(String Name,ArrayList<Module> Modules,ArrayList<Student> Students,DateTime StartDate,DateTime EndDate)
+    public Course(String Name,DateTime StartDate,DateTime EndDate)
     {
         this.Name=Name;
-        this.Modules=Modules;
-        this.Students=Students;
         this.StartDate=StartDate;
         this.EndDate=EndDate;
     }

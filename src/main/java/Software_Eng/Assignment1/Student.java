@@ -36,15 +36,19 @@ public class Student
     	Modules.add(m);
 	}
 	public void addCourse(String c){
-		Modules.add(c);
+		Courses.add(c);
 	}
 
 	public void Printout(){
 		System.out.printf("Username: %s",getUsername());
 		System.out.print("Modules: ");
-		for(String x:Modules){System.out.printf(x+" ");}
+		for(String x:Modules){
+			System.out.printf(x+" ");
+		}
 		System.out.print("Courses: ");
-		for(String x:Courses){System.out.printf(x+" ");}
+		for(String x:Courses){
+			System.out.printf(x+" ");
+		}
 
 	}
 

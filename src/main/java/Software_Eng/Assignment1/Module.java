@@ -11,12 +11,10 @@ public class Module
 	private ArrayList<Student> Students;
 	private ArrayList<String> Courses;
 
-    public Module(String Name,String ID,ArrayList<Student> Students,ArrayList<String> Courses)
+    public Module(String Name,String ID)
     {
     	this.Name=Name;
     	this.ID=ID;
-    	this.Students=Students;
-    	this.Courses=Courses;
     }
 
     public void addStudent(Student s){
