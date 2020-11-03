@@ -6,3 +6,8 @@ jdk:
   - oraclejdk11
 steps:
   - IN: SoftEng_Assignment_1_ciRepo
+
+build:
+  ci:
+   - mvn install
+   - mvn test
