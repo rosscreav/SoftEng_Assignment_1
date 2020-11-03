@@ -22,10 +22,10 @@ public class Module
     	s.addModule(Name);
 	}
 
-	public void addCourse(Course c){
-    	Courses.add(c.getName());
+	public void addCourse(String c){
+    	Courses.add(c);
 		for(Student x:Students){
-			x.addCourse(c.getName());
+			x.addCourse(c);
 		}
 	}
 

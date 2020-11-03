@@ -9,7 +9,6 @@ public class Course
 	//Variables
 	private String Name;
 	private ArrayList<Module> Modules;
-	private ArrayList<Student> Students;
 	private DateTime StartDate;
 	private DateTime EndDate;
 
@@ -22,6 +21,7 @@ public class Course
 
     public void addModule(Module m){
     	Modules.add(m);
+    	m.addCourse(Name);
 	}
 
 	@Override
@@ -32,14 +32,12 @@ public class Course
     //Accessor Methods
     public String getName(){return Name;}
 	public ArrayList<Module> getModules(){return Modules;}
-	public ArrayList<Student> getStudents(){return Students;}
 	public DateTime getStartDate(){return StartDate;}
 	public DateTime getEndDate(){return EndDate;}
 
 	//Mutator Methods
 	public void setName(String Name){this.Name=Name;}
 	public void setModules(ArrayList<Module> Modules){this.Modules=Modules;}
-	public void setStudents(ArrayList<Student> Students){this.Students=Students;}
 	public void setStartDate(DateTime StartDate){this.StartDate=StartDate;}
 	public void setEndDate(DateTime EndDate){this.EndDate=EndDate;}
 }
