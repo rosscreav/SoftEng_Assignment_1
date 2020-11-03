@@ -19,6 +19,8 @@ public class Student
 	
     public Student(String Name,int Age,DateTime DOB,long ID)
     {
+    	Courses=new ArrayList<>();
+    	Modules=new ArrayList<>();
         this.Name=Name;
         this.Age=Age;
         this.DOB=DOB;

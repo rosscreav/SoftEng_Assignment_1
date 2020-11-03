@@ -13,6 +13,8 @@ public class Module
 
     public Module(String Name,String ID)
     {
+		Students=new ArrayList<>();
+		Courses=new ArrayList<>();
     	this.Name=Name;
     	this.ID=ID;
     }

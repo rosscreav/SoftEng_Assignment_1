@@ -14,6 +14,7 @@ public class Course
 
     public Course(String Name,DateTime StartDate,DateTime EndDate)
     {
+    	Modules=new ArrayList<>();
         this.Name=Name;
         this.StartDate=StartDate;
         this.EndDate=EndDate;
