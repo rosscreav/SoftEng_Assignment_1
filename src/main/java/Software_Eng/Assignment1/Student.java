@@ -43,7 +43,7 @@ public class Student
 
 	public void Printout(){
 		System.out.printf("Username: %s",getUsername());
-		System.out.print("Modules: ");
+		System.out.print(" Modules: ");
 		for(String x:Modules){
 			System.out.printf(x+" ");
 		}
@@ -51,6 +51,7 @@ public class Student
 		for(String x:Courses){
 			System.out.printf(x+" ");
 		}
+		System.out.printf("\n");
 
 	}
 
