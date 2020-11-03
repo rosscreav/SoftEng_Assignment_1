@@ -21,6 +21,7 @@ public class Course
     }
 
     public void addModule(Module m){
+
     	Modules.add(m);
     	m.addCourse(Name);
 	}

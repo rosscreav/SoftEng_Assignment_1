@@ -25,7 +25,9 @@ public class Module
 	}
 
 	public void addCourse(String c){
-    	Courses.add(c);
+		if (!Courses.contains(c)) {
+			Courses.add(c);
+		}
 		for(Student x:Students){
 			x.addCourse(c);
 		}

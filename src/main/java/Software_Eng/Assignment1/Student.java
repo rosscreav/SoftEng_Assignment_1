@@ -35,10 +35,14 @@ public class Student
     }
 
     public void addModule(String m){
-    	Modules.add(m);
+		if (!Modules.contains(m)) {
+			Modules.add(m);
+		}
 	}
 	public void addCourse(String c){
-		Courses.add(c);
+		if (!Courses.contains(c)) {
+			Courses.add(c);
+		}
 	}
 
 	public void Printout(){
