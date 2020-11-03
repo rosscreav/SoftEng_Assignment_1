@@ -1,0 +1,4 @@
+name: SoftEng_Assignment_1_runCI
+type: runCI
+steps:
+  - IN: SoftEng_Assignment_1_ciRepo
