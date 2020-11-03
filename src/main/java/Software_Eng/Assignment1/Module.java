@@ -8,45 +8,42 @@ public class Module
 	//Variables
 	private String Name;
 	private String ID;
-	private ArrayList<Student> Students;
-	private ArrayList<String> Courses;
+	private ArrayList<Student> Students=new ArrayList<>();
+	private ArrayList<String> Courses=new ArrayList<>();
 
+	//Constructor
     public Module(String Name,String ID)
     {
-		Students=new ArrayList<>();
-		Courses=new ArrayList<>();
     	this.Name=Name;
     	this.ID=ID;
     }
 
+    //Add student to list and add Module to student
     public void addStudent(Student s){
+    	//Add student to list of students
     	Students.add(s);
+    	//Add the module to the student
     	s.addModule(Name);
 	}
 
+	//Add course to list and add course to student
 	public void addCourse(String c){
-		if (!Courses.contains(c)) {
-			Courses.add(c);
-		}
+    	//Add course to list of courses
+		Courses.add(c);
+		//Adds the course to all students in module
 		for(Student x:Students){
 			x.addCourse(c);
 		}
 	}
 
 	@Override
+	//To String method returns name of Module
 	public String toString(){
     	return Name;
 	}
 
     //Accessor Methods
-    public String getName(){return Name;}
-	public String getID(){return ID;}
 	public ArrayList<Student> getStudents(){return Students;}
 	public ArrayList<String> getCourses(){return Courses;}
 
-	//Mutator Methods
-	public void setName(String Name){this.Name=Name;}
-	public void setID(String ID){this.ID=ID;}
-	public void setStudents(ArrayList<Student> Students){this.Students=Students;}
-	public void setCourses(ArrayList<String> Courses){this.Courses=Courses;}
 }

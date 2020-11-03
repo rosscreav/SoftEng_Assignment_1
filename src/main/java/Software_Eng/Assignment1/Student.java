@@ -13,59 +13,44 @@ public class Student
 	private DateTime DOB;
 	private long ID;
 	private String Username;
-	private ArrayList<String> Courses;
-	private ArrayList<String> Modules;
+	private ArrayList<String> Courses=new ArrayList<>();
+	private ArrayList<String> Modules=new ArrayList<>();
 	
-	
+	//Constructor
     public Student(String Name,int Age,DateTime DOB,long ID)
     {
-    	Courses=new ArrayList<>();
-    	Modules=new ArrayList<>();
         this.Name=Name;
         this.Age=Age;
         this.DOB=DOB;
         this.ID=ID;
+        //Generates Username format FirstnameLastnameAge ie. RossCreaven2
+		Username=((Name+Age).replaceAll("\\s+", ""));
     }
 
-    public String getUsername(){
-    	if (Username==null) {
-    		Username=((Name+Age).replaceAll("\\s+", ""));
-    	}
-    	return Username;
-    }
-
+    //Adds the module to module list
     public void addModule(String m){
+    	//Check if module is already in list
 		if (!Modules.contains(m)) {
 			Modules.add(m);
 		}
 	}
+	//Adds the course to the course list
 	public void addCourse(String c){
+    	//Check if course is already in list
 		if (!Courses.contains(c)) {
 			Courses.add(c);
 		}
 	}
 
 	@Override
+	//Returns a string in the format "Username: %Username% Modules: %ModuleList% Courses: %CourseList%"
 	public String toString(){
-		return String.format("Username: %-30s Modules: %-80s Courses: %s \n",getUsername(),Modules,Courses);
-
+		return String.format("Username: %-30s Modules: %-80s Courses: %s \n",Username,Modules,Courses);
 	}
 
-    //Accessor Methods
-	public String getName(){return Name;}
-	public int getAge(){return Age;}
-	public DateTime getDOB(){return DOB;}
-	public long getID(){return ID;}
-	public ArrayList<String> getCourses(){return Courses;}
+	//Accessors
+	public String getUsername(){return Username; }
 	public ArrayList<String> getModules(){return Modules;}
-
-	//Mutator Methods
-	public void setName(String Name){this.Name=Name;}
-	public void setAge(int Age){this.Age=Age;}
-	public void setDOB(DateTime DOB){this.DOB=DOB;}
-	public void setID(long ID){this.ID=ID;}
-	public void setUsername(String Username){this.Username=Username;}
-	public void setCourses(ArrayList<String> Courses){this.Courses=Courses;}
-	public void setModules(ArrayList<String> Modules){this.Modules=Modules;}
+	public ArrayList<String> getCourses(){return Courses;}
     
 }

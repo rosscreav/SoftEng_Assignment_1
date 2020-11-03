@@ -1,38 +1,39 @@
 package Software_Eng.Assignment1;
 
-import junit.framework.Test;
 import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import org.joda.time.DateTime;
+
+import java.util.ArrayList;
 
 /**
- * Unit test for simple App.
+ * Unit test for Course class
  */
 public class CourseTest 
     extends TestCase
 {
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public CourseTest( String testName )
+    //Test addModule method
+    public void testaddModule()
     {
-        super( testName );
+        //Test Object
+        Course course = new Course("Name",new DateTime(),new DateTime());
+        //Mock Module
+        Module module = new Module("Name","ID");
+        //Creating Expected output
+        ArrayList<Module> m = new ArrayList<>();
+        m.add(module);
+        //Method call
+        course.addModule(module);
+        //Test
+        assertEquals(m,course.getModules());
     }
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
+    //Test toString method
+    public void testtoString()
     {
-        return new TestSuite( CourseTest.class );
+        //Test Object
+        Course course = new Course("Name",new DateTime(),new DateTime());
+        //Check output is name
+        assertEquals("Name",course.toString());
     }
 
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
-    }
 }
