@@ -47,7 +47,7 @@ public class Student
 
 	@Override
 	public String toString(){
-		return String.format("Username: %s Modules: %150s Courses: %150s \n",getUsername(),Modules,Courses);
+		return String.format("Username: %s\t\t Modules: %-150s Courses: %-150s \n",getUsername(),Modules,Courses);
 
 	}
 
