@@ -45,17 +45,9 @@ public class Student
 		}
 	}
 
-	public void Printout(){
-		System.out.printf("Username: %s",getUsername());
-		System.out.print(" \t\tModules: ");
-		for(String x:Modules){
-			System.out.printf(x+" ");
-		}
-		System.out.print("\t\t\t\t\tCourses: ");
-		for(String x:Courses){
-			System.out.printf(x+" ");
-		}
-		System.out.printf("\n");
+	@Override
+	public String toString(){
+		return String.format("Username: %s Modules: %150s Courses: %150s \n",getUsername(),Modules,Courses);
 
 	}
 
