@@ -1,4 +1,8 @@
 name: SoftEng_Assignment_1_runCI
 type: runCI
+language: java
+
+jdk:
+  - oraclejdk11
 steps:
   - IN: SoftEng_Assignment_1_ciRepo
