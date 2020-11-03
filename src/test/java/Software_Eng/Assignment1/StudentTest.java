@@ -33,7 +33,7 @@ public class StudentTest
      */
     public void testgetUsername()
     {
-        Student student = new Student("Ross Creaven",24,new DateTime(),17473436, null, null);
+        Student student = new Student("Ross Creaven",24,new DateTime(),17473436);
         assertEquals("RossCreaven24",student.getUsername());
     }
 }

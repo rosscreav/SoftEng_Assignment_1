@@ -22,6 +22,15 @@ public class Course
         this.EndDate=EndDate;
     }
 
+    public void addModule(Module m){
+    	Modules.add(m);
+	}
+
+	@Override
+	public String toString(){
+		return Name;
+	}
+
     //Accessor Methods
     public String getName(){return Name;}
 	public ArrayList<Module> getModules(){return Modules;}

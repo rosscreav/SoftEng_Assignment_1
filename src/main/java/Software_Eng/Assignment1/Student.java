@@ -13,18 +13,16 @@ public class Student
 	private DateTime DOB;
 	private long ID;
 	private String Username;
-	private ArrayList<Course> Courses;
-	private ArrayList<Module> Modules;
+	private ArrayList<String> Courses;
+	private ArrayList<String> Modules;
 	
 	
-    public Student(String Name,int Age,DateTime DOB,long ID,ArrayList<Course> Courses,ArrayList<Module> Modules)
+    public Student(String Name,int Age,DateTime DOB,long ID)
     {
         this.Name=Name;
         this.Age=Age;
         this.DOB=DOB;
         this.ID=ID;
-        this.Courses=Courses;
-        this.Modules=Modules;
     }
 
     public String getUsername(){
@@ -34,13 +32,29 @@ public class Student
     	return Username;
     }
 
+    public void addModule(String m){
+    	Modules.add(m);
+	}
+	public void addCourse(String c){
+		Modules.add(c);
+	}
+
+	public void Printout(){
+		System.out.printf("Username: %s",getUsername());
+		System.out.print("Modules: ");
+		for(String x:Modules){System.out.printf(x+" ");}
+		System.out.print("Courses: ");
+		for(String x:Courses){System.out.printf(x+" ");}
+
+	}
+
     //Accessor Methods
 	public String getName(){return Name;}
 	public int getAge(){return Age;}
 	public DateTime getDOB(){return DOB;}
 	public long getID(){return ID;}
-	public ArrayList<Course> getCourses(){return Courses;}
-	public ArrayList<Module> getModules(){return Modules;}
+	public ArrayList<String> getCourses(){return Courses;}
+	public ArrayList<String> getModules(){return Modules;}
 
 	//Mutator Methods
 	public void setName(String Name){this.Name=Name;}
@@ -48,7 +62,7 @@ public class Student
 	public void setDOB(DateTime DOB){this.DOB=DOB;}
 	public void setID(long ID){this.ID=ID;}
 	public void setUsername(String Username){this.Username=Username;}
-	public void setCourses(ArrayList<Course> Courses){this.Courses=Courses;}
-	public void setModules(ArrayList<Module> Modules){this.Modules=Modules;}
+	public void setCourses(ArrayList<String> Courses){this.Courses=Courses;}
+	public void setModules(ArrayList<String> Modules){this.Modules=Modules;}
     
 }
